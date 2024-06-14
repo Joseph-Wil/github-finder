@@ -7,12 +7,12 @@ function User() {
   const { username } = useParams();
   const [userData, setUserData] = useState({});
   const [repos, setRepos] = useState([]);
-  const token = process.env.REACT_APP_GITHUB_TOKEN;
-  const options = { headers: { Authorization: `Bearer ${token}`} };
   const userEndpoint = `https://api.github.com/users/${username}`;
   const reposEndpoint = `https://api.github.com/users/${username}/repos`;
 
   useEffect(() => {
+    const token = process.env.REACT_APP_GITHUB_TOKEN;
+    const options = { headers: { Authorization: `Bearer ${token}`} };
 
     const fetchUserData = async () => {
       try {
