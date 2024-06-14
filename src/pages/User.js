@@ -33,7 +33,6 @@ function User() {
 
   }, [username, token, options, userEndpoint, reposEndpoint]);
 
-
   return (
     <motion.section
       className='github-box container'
