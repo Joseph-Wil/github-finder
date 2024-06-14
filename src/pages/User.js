@@ -31,7 +31,7 @@ function User() {
         fetchUserData();
     }
 
-  }, [username, token, options, userEndpoint, reposEndpoint]);
+  }, [username, userEndpoint, reposEndpoint]);
 
   return (
     <motion.section
