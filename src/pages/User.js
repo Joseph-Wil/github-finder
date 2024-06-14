@@ -31,7 +31,7 @@ function User() {
         fetchUserData();
     }
 
-  }, [username]);
+  }, [username, token, options, userEndpoint, reposEndpoint]);
 
 
   return (
@@ -45,7 +45,7 @@ function User() {
       <section className='github-box container'>
           {userData ? (
           <div className='github-profile'>
-              <img src={userData.avatar_url} alt={`${userData.name}'s profile picture`} />
+              <img src={userData.avatar_url} alt={`${userData.name}'s profile`} />
               <h2 className='profile-name'>{userData.name}</h2>
               <div className='profile-stats'>
                 <div className='stats'>
